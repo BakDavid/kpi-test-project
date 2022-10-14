@@ -1,0 +1,125 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+:root {
+    --dark-green: #23b150;
+    --highlight-color: #ff1b68;
+    --dark-color: #323232;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    font-family: sans-serif;
+    margin: 0;
+    display: -ms-grid;
+    display: grid;
+    grid-template-rows: 6rem auto fit-content(8rem);
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+}
+
+main {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: main;
+}
+
+.main-header {
+    width: 100%;
+    background-color: white;
+    padding: 0.5rem 1rem;
+    z-index: 60;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 3px solid var(--dark-green);
+    border-top: 3px solid var(--dark-green);
+}
+
+.toggle-button__bar {
+    width: 0.2rem;
+    height: 1rem;
+    display: block;
+    background-color: var(--dark-green);
+}
+
+.main-nav__items {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+}
+
+.main-nav__item {
+    margin: 0 1rem;
+    font-weight: bold;
+}
+
+.main-nav__item a,
+.mobile-nav__item a {
+    text-decoration: none;
+    padding: 0.2rem 0;
+    color: gray;
+}
+
+.main-nav__item a:hover,
+.main-nav__item a:active {
+    color: var(--dark-green);
+}
+
+.main-header__brand {
+    color: var(--dark-green);
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+.main-header__brand img {
+    height: 2rem;
+    vertical-align: middle;
+}
+
+.main-footer {
+    padding: 2rem;
+    grid-area: footer;
+}
+
+.main-footer__links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.main-footer__link {
+    margin: 0.5rem 0;
+}
+
+@media (min-width: 40rem) {
+    .main-nav {
+        display: flex;
+    }
+
+    .main-header__brand {
+        font-size: 2rem;
+    }
+
+    .main-header__brand img {
+      height: 2.5rem;
+  }
+}

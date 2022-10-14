@@ -1,0 +1,195 @@
+#product-overview {
+    background: linear-gradient(to top, #e8e8e8 10%, transparent), #b8b8b8;
+    width: 100%;
+    padding: 5rem 4rem;
+}
+
+.product-title {
+    font-family: sans-serif;
+    font-size: 1.6rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+.product-indicator {
+    margin: 1rem 38%;
+    font-family: sans-serif;
+    font-size: 1rem;
+    text-align: center;
+    font-weight: bold;
+    border-bottom: 2px solid var(--dark-green);
+    border-top: 2px solid var(--dark-green);
+}
+
+.product-indicator__content {
+    margin: 0.5rem;
+}
+
+.product-benefits {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.product-benefits__left {
+    width: 60%;
+}
+
+.product-benefits__left-header {
+    display: flex;
+    align-items: center;
+}
+
+.product-benefits__left-header-text {
+    font-weight: bold;
+    margin: 0 1rem;
+}
+
+.product-benefits__left-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 3rem;
+}
+
+.product-benefits__left-section-text {
+    width: 60%;
+}
+
+.product-benefits__left-section-text-each {
+    margin-top: 2rem;
+}
+
+.green-bold-text {
+    display: inline;
+    color: var(--dark-green);
+    font-weight: bold;
+}
+
+.product-benefits__left-section-image {
+    width: 30%;
+}
+
+.product-benefits__right {
+    width: 35%;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 2px 2px 20px gray;
+    display: flex;
+    flex-flow: column;
+}
+
+.product-benefits__right-title {
+    color: var(--dark-green);
+    font-weight: bold;
+}
+
+.product-benefits__right-info {
+    margin: 1rem 0;
+}
+
+.input-form input {
+    margin: 0.2rem 0;
+    width: 100%;
+    height: 2rem;
+    padding: 0.5rem;
+}
+
+.form-submit-section {
+  display: flex;
+  justify-content: center;
+}
+
+.input-form button {
+  background-color: var(--dark-green);
+  color: white;
+  border-radius: 0.5rem;
+  width: 80%;
+  padding: 1rem;
+  border: 0;
+}
+
+.input-form button:hover {
+  background-color: white;
+  color: var(--dark-green);
+  border: 2px solid var(--dark-green);
+}
+
+.product-facts {
+  padding: 5rem 4rem;
+  width: 100%;
+}
+
+.product-facts-title{
+  text-align: center;
+  color: var(--dark-green);
+  font-size: 2em;
+}
+
+.product-facts-list{
+  margin: 3rem 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.product-facts-list-card{
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 15%;
+}
+
+.green-fact {
+  margin-top: 1rem;
+  color: var(--dark-green);
+  font-weight: bold;
+}
+
+.normal-fact {
+  margin-top: 0.5rem;
+}
+
+.product-support {
+  width: 96%;
+  background-color: var(--dark-color);
+  border-left: 10px solid var(--dark-green);
+  border-right: 10px solid var(--dark-green);
+  margin: 0 2%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.product-support-card {
+  color: white;
+  padding: 1rem 2rem;
+}
+
+.product-support-card-top{
+  display: flex;
+  align-items: center;
+}
+
+.product-support-card-top div{
+  padding-left: 1rem;
+}
+
+.product-support-card-bottom{
+  padding-top: 1rem;
+  padding-left: 2.5rem;
+}
+
+@media (min-width: 40rem) and (min-height: 40rem) {
+    #product-overview {
+        background-position: 50% 25%;
+    }
+
+    #product-overview h1 {
+        font-size: 3rem;
+    }
+}
+
+@media (min-width: 40rem) {
+  
+}
