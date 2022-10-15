@@ -115,7 +115,7 @@
     margin: 1rem 0;
 }
 
-.input-form input {
+.input-form input,select {
     margin: 0.2rem 0;
     width: 100%;
     height: 2rem;

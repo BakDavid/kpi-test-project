@@ -15,3 +15,4 @@ use App\Http\Controllers\HomeController;
 */
 
 Route::get('/', [HomeController::class, 'home'])->name('/');
+Route::post('/', [HomeController::class, 'processForm'])->name('/');

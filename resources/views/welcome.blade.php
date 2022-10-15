@@ -78,13 +78,24 @@
                     <div class="product-benefits__right-info">
                         To proceed with your order, please take a moment to fill in the fields below.
                     </div>
-                    <form class="input-form">
-                        <input type="text" placeholder="First Name" required />
-                        <input type="text" placeholder="Last Name" required />
-                        <input type="text" placeholder="Company" required />
-                        <input type="text" placeholder="Country" required />
-                        <input type="tel" placeholder="Phone Number" required />
-                        <input type="email" placeholder="Email Address" required />
+                    <form class="input-form" method="POST" action="{{url('/')}}">
+                        @csrf
+                        <input type="text" placeholder="First Name" name="firstName" required />
+                        <input type="text" placeholder="Last Name" name="lastName" required />
+                        <input type="text" placeholder="Company" name="company" required />
+                        <select name="country">
+                            <option value="" selected>Country</option>
+                            @foreach($countries as $country)
+
+                            <option value="{{ $country->phoneCode }}, {{ $country->name }}">
+                                {{ $country->name }}
+                            </option>
+
+                            @endforeach
+                        </select>
+                        <!-- <input type="text" placeholder="Country" name="country" required /> -->
+                        <input type="tel" placeholder="Phone Number" name="phoneNumber" required />
+                        <input type="email" placeholder="Email Address" name="email" required />
                         <div class="product-benefits__right-info">
                             <i>We value your privacy and will never disclose your data to third parties without your consent.</i>
                         </div>
@@ -128,7 +139,8 @@
         <div class="product-support">
             <div class="product-support-card">
                 <div class="product-support-card-top">
-                    <img src="{{ asset('assets/chatus_btn.png')}}" /> <div>CHAT WITH US</div>
+                    <img src="{{ asset('assets/chatus_btn.png')}}" />
+                    <div>CHAT WITH US</div>
                 </div>
                 <div class="product-support-card-bottom">
                     Have questions? A customer service representative is online to help you via Live Chat. Join in the conversation.
@@ -136,7 +148,8 @@
             </div>
             <div class="product-support-card">
                 <div class="product-support-card-top">
-                    <img src="{{ asset('assets/callus_btn.png')}}" /> <div>CALL US</div>
+                    <img src="{{ asset('assets/callus_btn.png')}}" />
+                    <div>CALL US</div>
                 </div>
                 <div class="product-support-card-bottom">
                     Get in touch with us. For immediate assistance, we're available to take your call at +61 3 9028 2223.
@@ -144,7 +157,8 @@
             </div>
             <div class="product-support-card">
                 <div class="product-support-card-top">
-                    <img src="{{ asset('assets/emailus_btn.png')}}" /> <div>EMAIL US</div>
+                    <img src="{{ asset('assets/emailus_btn.png')}}" />
+                    <div>EMAIL US</div>
                 </div>
                 <div class="product-support-card-bottom">
                     We'd love to help. Send us an email at office@kpiinstitute.org and a representative will get back to you.
