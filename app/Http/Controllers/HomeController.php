@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Country;
 use App\Models\DownloadTracker;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\DownloadTrackers;
 
 class HomeController extends Controller
 {
@@ -31,6 +33,9 @@ class HomeController extends Controller
         $downloadTracker->email = $request->email;
 
         $downloadTracker->save();
+
+        // mail send part ( Mailtrap configuration needed on first try )
+        Mail::to('fake@mail.com')->send(new DownloadTrackers($downloadTracker));
 
         // file download part
         $file = public_path()."/assets/TKI-Membership-Brochure.pdf";
